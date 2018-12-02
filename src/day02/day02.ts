@@ -1,8 +1,8 @@
-import common = require('../common');
+import common = require("../common");
 
 export function part1(): number {
     const sums = common.readInput(__dirname)
-        .map(id => {
+        .map((id) => {
             const occurrenceMap = new Map<string, number>();
             for (const c of id) {
                 const occurence = occurrenceMap.get(c);
@@ -10,7 +10,7 @@ export function part1(): number {
             }
             return Array.from(occurrenceMap.values());
         })
-        .map(occurences => [occurences.includes(2) ? 1 : 0, occurences.includes(3) ? 1 : 0])
+        .map((occurences) => [occurences.includes(2) ? 1 : 0, occurences.includes(3) ? 1 : 0])
         .reduce((f2, f3) => [f2[0] + f3[0], f2[1] + f3[1]], [0, 0]);
 
     return sums[0] * sums[1];
@@ -45,7 +45,7 @@ export function part2(): string | null {
     }
 
     function extractCommonPart(firstId: string, secondId: string): string {
-        let result = '';
+        let result = "";
         for (let i = 0; i < firstId.length; i += 1) {
             if (firstId[i] === secondId[i]) {
                 result = result + firstId[i];

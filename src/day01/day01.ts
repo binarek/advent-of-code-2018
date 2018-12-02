@@ -1,4 +1,4 @@
-import common = require('../common');
+import common = require("../common");
 
 export function part1(): number {
     return readChanges().reduce((c1, c2) => c1 + c2);
@@ -24,5 +24,5 @@ export function part2(): number {
 }
 
 function readChanges(): number[] {
-    return common.readInput(__dirname).map(line => Number(line));
+    return common.readInput(__dirname).map((line) => Number(line));
 }
