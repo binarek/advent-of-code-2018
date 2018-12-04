@@ -12,6 +12,9 @@
     "typescript": "^3.2.1"
   },
   "dependencies": {
-    "@types/node": "^10.12.11"
+    "@types/lodash": "^4.14.118",
+    "@types/node": "^10.12.11",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2"
   }
 }
