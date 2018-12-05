@@ -70,5 +70,5 @@ function readClaims() {
     return common.readInput(__dirname)
         .map((line) => lineRegex.exec(line))
         .filter((match) => match)
-        .map((match) => new Claim(+match[1], +match[2], +match[3], +match[4], +match[5]));
+        .map((match) => new Claim(+match![1], +match![2], +match![3], +match![4], +match![5]));
 }
